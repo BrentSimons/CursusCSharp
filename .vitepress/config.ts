@@ -3,6 +3,7 @@ import { defineConfig } from 'vitepress'
 // https://vitepress.vuejs.org/reference/site-config
 export default defineConfig({
   title: "Cursus C#",
+  base: '/CursusCSharp/',
   description: "Cursus voor training C#",
   themeConfig: {
     // https://vitepress.vuejs.org/reference/default-theme-config
