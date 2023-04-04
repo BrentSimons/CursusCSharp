@@ -12,11 +12,11 @@ export default defineConfig({
           { text: 'Syntax', link: '/Syntax' },
           { text: 'OOP', link: '/OOP' },
           {
-            text: 'Excercises',
+            text: 'Exercises',
             items: [
-              { text: 'Exercise 1', link: '/Excercises/Exercise_one' },
-              { text: 'Exercise 2', link: '/Excercises/Exercise_two' },
-              { text: 'Exercise 3', link: '/Excercises/Exercise_three' },
+              { text: 'Exercise 1', link: '/Exercises/Exercise_one' },
+              { text: 'Exercise 2', link: '/Exercises/Exercise_two' },
+              { text: 'Exercise 3', link: '/Exercises/Exercise_three' },
             ]
           }
     ],
@@ -28,13 +28,13 @@ export default defineConfig({
           { text: 'Home', link: '/' },
           { text: 'Syntax', link: '/Syntax' },
           { text: 'OOP', link: '/OOP' },
-          { text: 'Excercises', link: '/Excercises/Exercise_one' },
+          { text: 'Exercises', link: '/Exercises/Exercise_one' },
         ]
       }
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
+      { icon: 'linkedin', link: 'https://github.com/vuejs/vitepress' }
     ]
   }
 })

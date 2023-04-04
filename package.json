@@ -1,7 +1,16 @@
 {
+  "homepage": "https://BrentSimons.github.io/CursusCSharp",
   "scripts": {
     "docs:dev": "vitepress dev",
     "docs:build": "vitepress build",
-    "docs:preview": "vitepress preview"
+    "docs:preview": "vitepress preview",
+    "predeploy": "npm run docs:build",
+    "deploy": "gh-pages -d .vitepress/dist"
+  },
+  "dependencies": {
+    "vitepress": "^1.0.0-alpha.65"
+  },
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
   }
 }

@@ -3,15 +3,17 @@
 ## Creating a class
 
 In OOP, we organize our code into classes which contain data and methods. Later we can use these Classes to create objects/variables.
-To make a variable first make a new class in Visual Studio: start by rightclicking on your solution explorer:
+To make a class: create a new class item in visualstudio:
+
+First add -> New item:
 
 ![Right click solution explorer -> new item](/images/class/class_1.jpg)
 
-Then click on "Class", fill in a name (e.g. Car.cs)
+Click on "Class" and fill in a name (eg. Car.cs)
 
 ![Click on class, fil in name](/images/class/class_2.jpg)
 
-After pressing "Add" you should get a new page car.cs in your solution explorer. Now you should see this code:
+After pressing "Add" you should get a new file car.cs in your solution explorer. And should see this code:
 
 ![Code](/images/class/class_3.jpg)
 
@@ -29,10 +31,11 @@ class Person {
     }
 }
 ```
+In this example you can see the class Person, it has 2 properties, a name (string) and age (integer).
 
-#### Constructor
+### Constructor
 
-The constructor in this example allows us to create new instances of the Person class with specific initial values for the Name and Age properties.
+The constructor allows us to create new instances of the Person class with specific initial, or modified values for class' properties.
 
 ```csharp
 class Person {
@@ -40,9 +43,16 @@ class Person {
     public string Name { get; set; }
     public int Age { get; set; }
     
-    public Person(string name, int age) {
-        Name = name;
+    // constructor
+    public Person(string firstName, string lastName, int age) {
+        Name = firstName + " " + lastName;
         Age = age;
+    }
+
+    // alternative constructor
+    public Person(string name) {
+        Name = name;
+        Age = 0;
     }
 }
 ```
@@ -50,23 +60,29 @@ class Person {
 ## How do we use a class in code? NOT DONE
 ```csharp
 // Add import 
-using Person; // prbly wrong
+using Person;
+
+// Creating an object
 Person person1 = new Person("Alice", 25);
 
+// Using an object's method
 person1.SayHello();
-
-// Using getters and setters: VERIFY THIS CODE IDK IF WORKS
-Console.WiteLine(person1.Name);
-person1.Age = 24;
-Console.WriteLine(person1.Age)
 ```
-Outputs:
-```md
+
+Method output:
+```
 Hello, my name is Alice and I am 25 years old.
 ```
+
+// Using getters and setters:
+```csharp
+Console.WriteLine(person1.Name);
+person1.Age = 24;
+Console.WriteLine(person1.Age);
+```
+
 
 to add:
 To String overwrite and default
 Using this.Name inside object 
-Inheritance
 Public Private etc
