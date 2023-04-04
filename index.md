@@ -4,14 +4,11 @@ layout: home
 
 hero:
   name: "Cursus C#"
-  tagline: "Door: Brent Simons, Yarin van Raam en Selis Wouter"
+  tagline: "Door: Brent Simons, Yarin van Raam en Wouter Selis"
   actions:
     - theme: brand
       text: Get started with C#
       link: /Syntax
-    - theme: alt
-      text: Get started with Visual Studio
-      link: /Visual_Studio
 
 features:
   - title: Feature A

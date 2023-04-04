@@ -57,7 +57,7 @@ class Person {
 }
 ```
 
-## How do we use a class in code? NOT DONE
+## How do we use a class in code?
 ```csharp
 // Add import 
 using Person;
@@ -80,9 +80,21 @@ Console.WriteLine(person1.Name);
 person1.Age = 24;
 Console.WriteLine(person1.Age);
 ```
+## ToString function
+In C#, the `ToString()` method is used to convert an object into a string representation. By default, the `ToString()` method returns "the fully qualified name of the object's class". However, you should override this method to return a custom string providing more meaningful information.
 
+```csharp
+public override string ToString()
+{
+    return $"{Name} - {Age}";
+}
+```
 
-to add:
-To String overwrite and default
-Using this.Name inside object 
-Public Private etc
+## Access Modifiers
+Access modifiers are keywords used to specify the accessibility of classes, methods, properties, fields, and other members of a program. The four main access modifiers in C# are `public`, `private`, `protected`, and `internal`.
+
+`public` members can be accessed from anywhere, including from outside the class, making them the most permissive access modifier.
+
+`private` members can only be accessed within the class where they are defined, making them the most restrictive access modifier.
+
+When you generate a class it will be `internal` by default, you should change this to `public`.
