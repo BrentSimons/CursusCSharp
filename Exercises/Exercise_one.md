@@ -1,42 +1,75 @@
-## Exercise 1: Personen register
+## Exercise 1: Console Applicatie Garage
 
-In deze oefening maken we een personen register voor de stad Pelt. De applicatie moet personen kunnen opslaan en verwijderen in een listbox.
+In deze oefening maken we een simpele garage applicatie. De vereisten zijn enkel het toevoegen van autos aan de garage en bekijken van al de autos in de garage.
 
-Voor elke persoon slaan we de naam, leeftijd en adres op. Ook moet er een functie zijn om de tekst over de persoon te laten zien in de listbox.
+Bij deze oefeningen krijg je de grote lijnen van de code al, je moet enkel OOP code toevoegen.
+Voor deze oefening kan je best kijken naar het Hoofdstuk OOP: Titels [Creating a class, Constructor en ToString function]
 
-![personenRegister](/images/exercises/personenRegister.png)
-
-### Werken met een listbox
-
-Om te werken met een listbox in WF kan je best een private lijst aanmaken in je Form class
-
+Hieronder staat de code die je in de oefening moet gebruiken, begin eerst met een Console applicatie genaamd Parking aan te maken, als je het project een andere naam geeft krijg je problemen met het importen.
 ```csharp
-private List<Object> objectList = new List<Object>();
-```
+// Om een class te importeren moet je de namespace waarin de class zich bevind importeren
+using Parking;
 
-En een functie aanmaken die de listbox gelijksteld aan de list
+List< > autoLijst = new List< >();
 
-```csharp
-private void RefreshListBox()
+while (true)
 {
-    listBox.Items.Clear();
-    foreach (var object in objectList)
+    Console.Clear();
+    Console.WriteLine("\n Welkom in het Garagesysteem: \n ---------------------------- \n");
+    Console.WriteLine("Typ 1 om alle autos in het systeem te bekijken.");
+    Console.WriteLine("Typ 2 om een nieuwe auto in het systeem toetevoegen");
+    Console.WriteLine("Typ 3 om het systeem te verlaten \n");
+
+    int keuze = int.Parse(Console.ReadLine());
+    Console.Clear();
+
+    if (keuze == 1)
     {
-        listBox.Items.Add(object.ToString());
+        Console.WriteLine("Overzicht autos in de garage: \n \n ");
+        /*
+        Hier moet je code maken om door de lijst van autoLijst te loopen, en voor elke auto de ToString functie uitvoeren
+        */
+
+
+        // Laat deze ReadLine staan zodat het overzicht van autos niet meteen sluit
+        Console.ReadLine();
+    }
+    else if (keuze == 2)
+    {
+        // Dit zijn de variabelen die je nodig gaat hebben in je nieuw Object
+        Console.WriteLine("Nummerplaat nieuwe auto: ");
+        string nummerPlaat = Console.ReadLine();
+
+        Console.WriteLine("Merk nieuwe auto: ");
+        string merk = Console.ReadLine();
+
+        Console.WriteLine("Model nieuwe auto: ");
+        string model = Console.ReadLine();
+
+        Console.WriteLine("Aantal deuren van de nieuwe auto: ");
+        int aantalDeuren = int.Parse(Console.ReadLine());
+
+        // Maak hier een nieuwe auto aan en voeg deze toe aan autoLijst
+
+
+
+    }
+    else if (keuze == 3)
+    {
+        break;
+    }
+    else
+    {
+        Console.WriteLine("\n \n Incorrecte ingave, klik op enter om doortegaan");
+        Console.ReadLine();
     }
 }
 ```
 
-Daarna kan je objects toevoegen of verwijderen van de listbox door ze eerst toetevoegen/te verwijderen van de lijst, en dan de functie uittevoeren:
+Zie hier nog wat fotos hoe het eindeproduct eruit moet zien
 
-```csharp
-private void btnVoegPersoonToe_Click(object sender, EventArgs e)
-{
-    string name = txtObject.text;
+#### Overzicht autos:
+![ConsoleGarage](/images/exercises/ConsoleGarageOverzicht.png)
 
-    var object = new Object(name);
-
-    objectList.Add( persoon );
-    RefreshListBox();
-}
-```
+#### Aanmaken nieuwe auto:
+![ConsoleGarage](/images/exercises/ConsoleGarageAanmaken.png)
