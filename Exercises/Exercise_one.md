@@ -6,6 +6,7 @@ Bij deze oefeningen krijg je de grote lijnen van de code al, je moet enkel OOP c
 Voor deze oefening kan je best kijken naar het Hoofdstuk OOP: Titels [Creating a class, Constructor en ToString function]
 
 Hieronder staat de code die je in de oefening moet gebruiken, begin eerst met een Console applicatie genaamd Parking aan te maken, als je het project een andere naam geeft krijg je problemen met het importen.
+Als je het project aanhebgemaakt kan je beginnen met OOP door een nieuwe klasse "Auto" toetevoegen aan het project.
 ```csharp
 // Om een class te importeren moet je de namespace waarin de class zich bevind importeren
 using Parking;

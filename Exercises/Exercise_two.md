@@ -12,32 +12,32 @@ Om te werken met een listbox in WF kan je best een private lijst aanmaken in je 
 
 ```csharp
 private List<Object> objectList = new List<Object>();
-    ```
+```
 
-    En een functie aanmaken die de listbox gelijksteld aan de list
+En een functie aanmaken die de listbox gelijksteld aan de list
 
-    ```csharp
-    private void RefreshListBox()
+```csharp
+private void RefreshListBox()
+{
+    listBox.Items.Clear();
+    foreach (var object in objectList)
     {
-        listBox.Items.Clear();
-        foreach (var object in objectList)
-        {
-            listBox.Items.Add(object.ToString());
-        }
+        listBox.Items.Add(object.ToString());
     }
-    ```
+}
+```
 
-    Daarna kan je objects toevoegen of verwijderen van de listbox door ze eerst toetevoegen/te verwijderen van de lijst, en dan de functie uittevoeren:
+Daarna kan je objects toevoegen of verwijderen van de listbox door ze eerst toetevoegen/te verwijderen van de lijst, en dan de functie uittevoeren:
 
-    ```csharp
-    private void btnVoegPersoonToe_Click(object sender, EventArgs e)
-    {
-        string name = txtObject.text;
+```csharp
+private void btnVoegPersoonToe_Click(object sender, EventArgs e)
+{
+    string name = txtObject.text;
 
-        var object = new Object(name);
+    var object = new Object(name);
 
-        objectList.Add( persoon );
-        RefreshListBox();
-    }
-    ```
+    objectList.Add( persoon );
+    RefreshListBox();
+}
+```
     
