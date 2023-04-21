@@ -14,15 +14,17 @@ using Parking;
 // Maak hier een lijst van u object van
 List< > autoLijst = new List< >();
 
-while (true)
+int keuze = 1;
+
+while (keuze != 0)
 {
     Console.Clear();
     Console.WriteLine("\n Welkom in het Garagesysteem: \n ---------------------------- \n");
+    Console.WriteLine("Typ 0 om het systeem te verlaten \n");
     Console.WriteLine("Typ 1 om alle autos in het systeem te bekijken.");
     Console.WriteLine("Typ 2 om een nieuwe auto in het systeem toetevoegen");
-    Console.WriteLine("Typ 3 om het systeem te verlaten \n");
 
-    int keuze = int.Parse(Console.ReadLine());
+    keuze = int.Parse(Console.ReadLine());
     Console.Clear();
 
     if (keuze == 1)
@@ -55,10 +57,6 @@ while (true)
 
 
 
-    }
-    else if (keuze == 3)
-    {
-        break;
     }
     else
     {
