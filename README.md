@@ -1,6 +1,6 @@
 # CursusCSharp
 
-Deze Vitepress-cursus bevat leermateriaal over C# OOP en werd gebruikt voor een trainingsessie aan de middelbare school Wico Campus Pelt. De cursus bevat 6 pagina's:
+Deze Vitepress-cursus bevat leermateriaal over C# OOP en werd gebruikt voor een trainingsessie aan de middelbare school Wico Campus Pelt. De cursus bevat 5 pagina's:
 
     - Syntax: Cheat sheet van C#.
     - OOP: Leerstof over C#.
